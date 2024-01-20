@@ -7,7 +7,7 @@ import {v2 as cloudinary} from 'cloudinary';
 import app from "./app.js"
 import connectDatabase from "./db/dataBase.js"
 
-const port = parseInt(process.env.PORT) || 3000;
+const port = parseInt(process.env.PORT) || 4000;
 
    
 try {

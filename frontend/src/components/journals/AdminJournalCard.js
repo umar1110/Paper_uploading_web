@@ -27,7 +27,7 @@ function AdminJournalCard({ journal, sr }) {
           {journal.date.substring(0, 10)}
         </div>
         <div className="downloadLink  w-[10%] p-2  border-gray-200">
-          <a className="downloadPdf" href={journal.pdf.url}>
+          <a className="downloadPdf" href={journal.pdf?.url }>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
