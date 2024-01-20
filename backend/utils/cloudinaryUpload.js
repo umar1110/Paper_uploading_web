@@ -1,11 +1,9 @@
 import cloudinary from "cloudinary";
-import fs from 'fs'
+import fs from "fs";
 
 export const cloudinaryUpload = async (localFilePath, fileName) => {
-
-  
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = dirname(__filename);
+  // const __filename = fileURLToPath(import.meta.url);
+  // const __dirname = dirname(__filename);
 
   try {
     const uniqueFilename = `${fileName}-${Date.now()}`;
@@ -16,20 +14,18 @@ export const cloudinaryUpload = async (localFilePath, fileName) => {
       folder: "Journals",
     });
 
-  try {
-   
+    // try {
 
+    //     fs.unlinkSync(localFilePath, (err) => {
+    //       if (err) {
+    //         console.error("Error deleting file:", err);
 
-      fs.unlinkSync(localFilePath, (err) => {
-        if (err) {
-          console.error("Error deleting file:", err);
-         
-        }
-      });
-     
-  } catch (error) {
-    console.log("Error in deleting from public/temp")
-  }
+    //       }
+    //     });
+
+    // } catch (error) {
+    //   console.log("Error in deleting from public/temp")
+    // }
     return response;
   } catch (error) {
     console.error("Error uploading to Cloudinary:", error);
