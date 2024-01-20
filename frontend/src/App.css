@@ -1,0 +1,10 @@
+
+.active{
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  color: white;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,28 @@
+.footer h1,
+.footer a{
+    color: yellow;
+}
+.footer a{
+    text-decoration:  underline;
+    display: block;
+}
+.footer p{
+    color: white;
+}
+
+.footer h1{
+    font-size: x-large;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footer-main > div{
+    padding: 0 40px 40px 0;
+    width: 250px;
+}
+
+@media screen and (min-width:700px){
+    .footer h1{
+        
+        margin-bottom: 30px;
+    } 
+}

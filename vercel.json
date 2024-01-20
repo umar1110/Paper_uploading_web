@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "backend/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "backend/server.js"
+    }
+  ],
+  "env": {
+    "PORT": "4000",
+    
+    "FRONTEND_URL": "http://localhost:3000",
+    "DB_URI": "mongodb+srv://umarrajpoot10022004:umar1110@cellcave.txijojc.mongodb.net",
+    "JWT_SECRET": "xqg2H_C{x<tqUuYHdf6UNrw6*0LafpG&YkgjvNbJB30wm:?Q|o34*HLI_",
+    "JWT_EXPIRE": "5d",
+    "COOKIE_EXPIRE": "5",
+    "SMPT_MAIL": "umarworkbase10@gmail.com",
+    "SMPT_PASSWORD": "gyaifhwpsolulron",
+    "CLOUDINARY_NAME": "ddv6lasng",
+    "CLOUDINARY_SECRET": "3Gu9nRHu4TvCta86dte7f4czfUo",
+    "CLOUDINARY_API_KEY": "384129393863638"
+  }
+}
