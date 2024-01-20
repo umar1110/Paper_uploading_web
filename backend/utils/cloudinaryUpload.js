@@ -1,13 +1,11 @@
 import cloudinary from "cloudinary";
 import fs from 'fs'
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-import path from "path";
+
 export const cloudinaryUpload = async (localFilePath, fileName) => {
 
   
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
 
   try {
     const uniqueFilename = `${fileName}-${Date.now()}`;
@@ -19,10 +17,10 @@ const __dirname = dirname(__filename);
     });
 
   try {
-    const filePath = path.resolve(path.join(__dirname, '/../'), fileName);
+   
 
 
-      fs.unlink(filePath, (err) => {
+      fs.unlinkSync(localFilePath, (err) => {
         if (err) {
           console.error("Error deleting file:", err);
          
