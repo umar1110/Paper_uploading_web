@@ -6,7 +6,7 @@ export const getMyJournals = createAsyncThunk(
     // sliceName / actionName  = type
     try {
       const response = await axios.get(`/api/v1/me/journals?page=${page}`);
-      console.log(response.data);
+     
       return response.data;
       
     } catch (error) {

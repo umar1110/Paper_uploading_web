@@ -15,14 +15,14 @@ function MyJournalsCard({
 
   const resubmitRef = useRef(null);
   const onUploadFileHandler = () => {
-    // console.log("Asdsssssssas")
+   
     resubmitRef.current.click();
   };
 
   const submitFileHandler = (e) => {
     const formData = new FormData();
     formData.append("journal", e.target.files[0]);
-    console.log("file");
+  
     const config = {
       headers: { "Content-Type": "multipart/form-data" },
     };
@@ -55,17 +55,16 @@ function MyJournalsCard({
         </div>
         <div
           onClick={() => navigate(`/mypaper/${journal._id}`)}
-          className="titleHeading hover:underline cursor-pointer w-[40%] p-2 border-r-2 border-gray-200"
+          className="titleHeading hover:underline cursor-pointer w-[35%] p-2 border-r-2 border-gray-200"
         >
           {journal.title}
         </div>
-        <div
-          className={`authorHeading w-[30%] p-2 border-r-2 font-bold border-gray-200 ${
-            journal.status == "Published"
+        <div className={`authorHeading w-[25%] p-2 border-r-2 font-bold border-gray-200 ${
+            journal.status === "Published"
               ? "text-green-800"
-              : journal.status == "Under Review"
+              : journal.status === "Under Review"
               ? "text-yellow-400"
-              : journal.status == "Submitted"
+              : journal.status === "Submitted"
               ? "text-gray-600"
               : "text-red-900 "
           }`}
@@ -77,7 +76,7 @@ function MyJournalsCard({
         <div className="actions w-[15%] p-2 border-r-2 border-gray-200">
           {journal.date.substring(0, 10)}
         </div>
-        <div className="downloadLink flex px-7 justify-between w-[10%] p-2  border-gray-200">
+        <div className="downloadLink flex px-7 justify-between w-[20%] p-2  border-gray-200">
           <a className="downloadPdf w-1/2 " href={journal.pdf.url}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -86,17 +85,17 @@ function MyJournalsCard({
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-download"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-download"
             >
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" x2="12" y1="15" y2="3" />
             </svg>
           </a>
-          {journal.status === "Resubmit" && (
+          {journal?.status === "Resubmit" && (
             <div
               className="UploadPdf cursor-pointer "
               onClick={onUploadFileHandler}
@@ -108,10 +107,10 @@ function MyJournalsCard({
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-upload"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-upload"
               >
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                 <polyline points="17 8 12 3 7 8" />

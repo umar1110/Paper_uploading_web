@@ -39,7 +39,7 @@ if(success)
     <div className="home">
       {loading || resubmitLoading  ? (
         <Loader />
-      ) : journals.length == 0 ? (
+      ) : journals.length === 0 ? (
         <>
           <div
             id="filterMenu"
@@ -54,16 +54,16 @@ if(success)
                 <div className="serialNoHeadings w-[5%]  font-semibold border-b-2 p-2 flex-shrink-0 border-r-2 border-gray-200">
                   Sr.
                 </div>
-                <div className="titleHeading w-[40%] font-semibold border-b-2 p-2  flex-grow border-r-2 border-gray-200">
+                <div className="titleHeading w-[35%] font-semibold border-b-2 p-2  flex-grow border-r-2 border-gray-200">
                   Title
                 </div>
-                <div className="authorHeading w-[30%] font-semibold border-b-2 p-2  flex-grow border-r-2 border-gray-200">
+                <div className="authorHeading w-[25%] font-semibold border-b-2 p-2  flex-grow border-r-2 border-gray-200">
                   Status
                 </div>
                 <div className="dateHeading w-[15%] font-semibold border-b-2 p-2 border-r-2 border-gray-200">
                   Date
                 </div>
-                <div className="downloadLink w-[10%] font-semibold border-b-2 p-2   border-gray-200">
+                <div className="downloadLink w-[20%] font-semibold border-b-2 p-2   border-gray-200">
                   Download/Upload
                 </div>
               </div>
@@ -78,7 +78,7 @@ if(success)
         <>
           <div className="relative">
             <div className="journalslist min-h-[60vh] border-2 overflow-scroll overflow-x-scroll border-gray-200  mt-2 mx-auto w-[98%]">
-              <div className="journals min-w-[700px] ">
+              <div className="journals min-w-[800px] w-full ">
                 <div
                   className="journalHeadings w-full flex"
                   style={{ backgroundColor: "#DAEFF1" }}
@@ -86,16 +86,16 @@ if(success)
                   <div className="serialNoHeadings w-[5%]  font-semibold border-b-2 p-2 flex-shrink-0 border-r-2 border-gray-200">
                     Sr.
                   </div>
-                  <div className="titleHeading w-[40%] font-semibold border-b-2 p-2  flex-grow border-r-2 border-gray-200">
+                  <div className="titleHeading w-[35%] font-semibold border-b-2 p-2  flex-grow border-r-2 border-gray-200">
                     Title
                   </div>
-                  <div className="authorHeading w-[30%] font-semibold border-b-2 p-2  flex-grow border-r-2 border-gray-200">
+                  <div className="authorHeading w-[25%] font-semibold border-b-2 p-2  flex-grow border-r-2 border-gray-200">
                     Status
                   </div>
                   <div className="dateHeading w-[15%] font-semibold border-b-2 p-2 border-r-2 border-gray-200">
-                    Actions
+                    Date
                   </div>
-                  <div className="downloadLink w-[10%] font-semibold border-b-2 p-2   border-gray-200">
+                  <div className="downloadLink w-[20%] font-semibold border-b-2 p-2   border-gray-200">
                     Download/Upload
                   </div>
                 </div>

@@ -6,6 +6,12 @@ function Header() {
     document.querySelector("#mobile-menu").classList.toggle("hidden");
   };
 
+
+  const closeMenu = ()=>{
+    document.querySelector("#mobile-menu").classList.add("hidden");
+
+  }
+
   const profileHandler = () => {
     console.log("profileHandler");
   };
@@ -16,6 +22,7 @@ function Header() {
         <div className="relative  flex h-20 items-center justify-between">
           <div className="absolute inset-y-0 right-[45%] flex items-center lg:hidden">
             <Link
+            onClick={closeMenu}
               to="/"
               className=" text-white  text-lg font-serif font-bold  "
               aria-current="page"
@@ -24,7 +31,7 @@ function Header() {
             </Link>
           </div>
           <div className="profileBtn absolute inset-y-0 right-[0%] lg:hidden flex items-center space-x-3 translate-x-2 ">
-           <Link to={"/login"}> <svg
+           <Link onClick={closeMenu} to={"/login"}>  <svg
               className="cursor-pointer lucide lucide-circle-user-round"
               xmlns="http://www.w3.org/2000/svg"
               width="34"
@@ -76,6 +83,7 @@ function Header() {
               <div className="flex items-center justify-between  w-full ">
                 <div className="logo flex">
                   <NavLink
+                  onClick={closeMenu}
                     to="/"
                     className=" text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-4 py-3 text-lg "
                     aria-current="page"
@@ -85,49 +93,56 @@ function Header() {
                 </div>
                 <div className="options flex space-x-2">
                   <NavLink
+                  onClick={closeMenu}
                     to="/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lg "
                   >
                     Home
                   </NavLink>
                   <NavLink
+                  onClick={closeMenu}
                     to="journals"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-lg "
                   >
                     Journals
                   </NavLink>
                   <NavLink
+                  onClick={closeMenu}
                     to="about"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lg "
                   >
                     About Us
                   </NavLink>
                   <NavLink
+                  onClick={closeMenu}
                     to="editorial"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lg "
                   >
                     Editorial Board
                   </NavLink>
                   <NavLink
+                  onClick={closeMenu}
                     to="author"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lg "
                   >
                     Author Guideliness
                   </NavLink>
                   <NavLink
+                  onClick={closeMenu}
                     to="archive"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lg "
                   >
                     Archive
                   </NavLink>
                   <NavLink
+                  onClick={closeMenu}
                     to="contact"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lg "
                   >
                     Contact Us
                   </NavLink>
                   <div className="flex items-center space-x-2">
-                  <Link to={"/login"}> <svg
+                  <Link onClick={closeMenu} to={"/login"}> <svg
               className="cursor-pointer lucide lucide-circle-user-round"
               xmlns="http://www.w3.org/2000/svg"
               width="34"
@@ -155,42 +170,49 @@ function Header() {
         <div className="lg:hidden hidden transition-all duration-700" id="mobile-menu">
           <div className="space-y-1 px-2 pb-3 pt-2">
             <NavLink
+            onClick={closeMenu}
               to="/"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base "
             >
               Home
             </NavLink>
             <NavLink
+            onClick={closeMenu}
               to="journals"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base "
             >
               Journals
             </NavLink>
             <NavLink
+            onClick={closeMenu}
               to="about"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base "
             >
               About Us
             </NavLink>
             <NavLink
+            onClick={closeMenu}
               to="editorial"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base "
             >
               Editorial Board
             </NavLink>
             <NavLink
+            onClick={closeMenu}
               to="author"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base "
             >
               Author Guideliness
             </NavLink>
             <NavLink
+            onClick={closeMenu}
               to="archive"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base "
             >
               Archive
             </NavLink>
             <NavLink
+            onClick={closeMenu}
               to="contact"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base "
             >

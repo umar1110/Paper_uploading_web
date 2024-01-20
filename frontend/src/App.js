@@ -48,12 +48,12 @@ function App() {
           <Route path="/author" element={<Author />} />
           <Route path="/archive" element={<Archive />} />
           <Route path="/login" element={<LoginSignUpp />} />
-          <Route path="/account" element={<PrAccRoute />} />
-          <Route path="/myjournals" element={<PrMyJournals />} />
-          <Route path="/submit/journal" element={<PrSubmitJournal />} />
+          <Route path="/account/*" element={<PrAccRoute />} />
+          <Route path="/myjournals/*" element={<PrMyJournals />} />
+          <Route path="/submit/journal/*" element={<PrSubmitJournal />} />
           <Route path="/paper/:id" element={<JournalDetails />} />
-          <Route path="/mypaper/:id" element={<PrMyJournalDetails />} />
-          <Route path="/admin/paper/:id" element={<PrAdminJournalDetails />} />
+          <Route path="/mypaper/:id/*" element={<PrMyJournalDetails />} />
+          <Route path="/admin/paper/:id/*" element={<PrAdminJournalDetails />} />
 
           <Route
             path="/admin/dashboard/*"

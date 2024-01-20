@@ -75,7 +75,7 @@ function LoginSignUpp() {
       profession,
     };
 
-    console.log(profession);
+   
     dispatch(registerUser(myData));
   };
 
@@ -233,8 +233,8 @@ function LoginSignUpp() {
                     id="professionSelection"
                     onChange={registerDataChange}
                   >
-                    {professionOptions.map((e) => (
-                      <option value={e}>{e}</option>
+                    {professionOptions.map((e,i) => (
+                      <option key={i} value={e}>{e}</option>
                     ))}
                   </select>
                 </div>

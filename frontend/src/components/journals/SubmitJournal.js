@@ -35,7 +35,7 @@ function SubmitJournal() {
     formData.append("journal", file);
     formData.append("form",form)
     
-    console.log(formData.get("form"))
+   
 
     dispatch(submitJournal(formData));
   };
@@ -76,22 +76,22 @@ function SubmitJournal() {
             </div>
           )}
           <form
-            class="w-full min-h-fit py-11 my-16 z-30  max-w-sm mx-auto h-[90vh] flex flex-col justify-center"
+            className="w-full min-h-fit py-11 my-16 z-30  max-w-sm mx-auto h-[90vh] flex flex-col justify-center"
             onSubmit={submitForm}
           >
-            <div class="md:flex md:items-center mb-6">
-              <div class="md:w-1/3 text-start">
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3 text-start">
                 <label
-                  class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  for="inline-full-name"
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-full-name"
                 >
                   Title
                 </label>
               </div>
-              <div class="md:w-2/3">
+              <div className="md:w-2/3">
                 <input
                   required
-                  class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                   id="inline-full-name"
                   type="text"
                   placeholder="Enter Title"
@@ -103,19 +103,19 @@ function SubmitJournal() {
               </div>
             </div>
 
-            <div class="md:flex md:items-center mb-6">
-              <div class="md:w-1/3 text-start">
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3 text-start">
                 <label
-                  class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  for="inline-password"
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-password"
                 >
                   Authors :
                 </label>
               </div>
-              <div class="md:w-2/3">
+              <div className="md:w-2/3">
                 <input
                   required
-                  class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                   id="inline-password"
                   type="text"
                   placeholder="Authors, publishers"
@@ -125,19 +125,19 @@ function SubmitJournal() {
               </div>
             </div>
 
-            <div class="md:flex md:items-center mb-6">
-              <div class="md:w-1/3 text-start">
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3 text-start">
                 <label
-                  class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  for="inline-email"
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-email"
                 >
                   Email :
                 </label>
               </div>
-              <div class="md:w-2/3">
+              <div className="md:w-2/3">
                 <input
                   required
-                  class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                   id="inline-email"
                   type="email"
                   placeholder="Enter Email"
@@ -147,18 +147,18 @@ function SubmitJournal() {
               </div>
             </div>
 
-            <div class="md:flex md:items-center mb-6">
-              <div class="md:w-1/3 text-start">
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3 text-start">
                 <label
-                  class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  for="inline-description"
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-description"
                 >
                   Abstract :
                 </label>
               </div>
-              <div class="md:w-2/3">
+              <div className="md:w-2/3">
                 <textarea
-                  class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                   id="inline-description"
                   type="text"
                   placeholder="Enter description"
@@ -168,19 +168,19 @@ function SubmitJournal() {
               </div>
             </div>
 
-            <div class="md:flex md:items-center mb-6">
-              <div class="md:w-1/3 text-start">
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3 text-start">
                 <label
-                  class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  for="inline-journal"
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-journal"
                 >
                   Upload Paper :
                 </label>
               </div>
-              <div class="md:w-2/3">
+              <div className="md:w-2/3">
                 <input
                   required
-                  class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                   id="inline-journal"
                   type="file"
                   accept=".pdf, application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -190,34 +190,34 @@ function SubmitJournal() {
               </div>
             </div>
 
-            <div class="md:flex md:items-center mb-6">
-              <div class="md:w-1/3 min-w-fit text-start">
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3 min-w-fit text-start">
                 <label
-                  class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  for="inline-journal"
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-journal"
                 >
                   Download Form :
                 </label>
               </div>
               
-              <a class="md:w-2/3 mx-auto"  onClick={()=>window.location.href = formUrl} >
+              <a className="md:w-2/3 mx-auto"  onClick={()=>window.location.href = formUrl} >
                 <button className="w-full text-white rounded-md bg-gray-700 py-3 px-6">Download form </button>
               </a>
             </div>
 
-            <div class="md:flex md:items-center mb-6">
-              <div class="md:w-1/3 min-w-fit text-start">
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3 min-w-fit text-start">
                 <label
-                  class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  for="inline-journal"
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-journal"
                 >
                   Upload Form <br />( After Fill ) :
                 </label>
               </div>
-              <div class="md:w-2/3">
+              <div className="md:w-2/3">
                 <input
                   required
-                  class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                   id="inline-journal"
                   type="file"
                   accept=".pdf, application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -227,11 +227,11 @@ function SubmitJournal() {
               </div>
             </div>
 
-            <div class="md:flex md:items-center">
-              <div class="md:w-1/3"></div>
-              <div class="md:w-2/3">
+            <div className="md:flex md:items-center">
+              <div className="md:w-1/3"></div>
+              <div className="md:w-2/3">
                 <button
-                  class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                  className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                   type="submit"
                 >
                   Submit
