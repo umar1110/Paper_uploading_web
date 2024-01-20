@@ -69,7 +69,7 @@ function Journals() {
 
       {loading ? (
         <Loader />
-      ) : journals.length == 0 ? (
+      ) : journals.length === 0 ? (
         <>
           <div className="buttonForFIlter lg:hidden text-center mt-4 text-white">
             <button

@@ -118,7 +118,7 @@ function LoginSignUpp() {
       ) : (
         <>
           {isAlertDisplay && (
-            <div className="alert absolute w-full ">
+            <div className="alert fixed top-0 w-full ">
               <Stack sx={{ width: "100%" }} spacing={2}>
                 <Alert severity={alertType}>{alertMessage}</Alert>
               </Stack>

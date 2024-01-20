@@ -12,7 +12,7 @@ import Home from "./components/pages/Home/Home";
 import Footer from "./components/layout/Footer";
 import Journals from "./components/journals/Journals.js";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getUserInfo } from "./reducers/userReducer.js";
 import LoginSignUpp from "./components/user/LoginSignUPP.js";
 
@@ -23,13 +23,13 @@ import PrSubmitJournal from "./protectedRoutes/PrSubmitJournal.js";
 import PrAdDashboardRoute from "./protectedRoutes/PrAdDashboardRoute.js";
 import JournalDetails from "./components/journals/JournalDetails.js";
 import PrAdminJournalDetails from "./protectedRoutes/PrAdminJournalDetails.js";
-import MyJournalDetails from "./components/journals/JournalDetails.js";
+
 import PrMyJournalDetails from "./protectedRoutes/PrMyJournalDetails.js";
 import NotFound from "./components/pages/NotFound.js";
 
 function App() {
   const dispatch = useDispatch();
-  const { loading, isAuthenticated } = useSelector((state) => state.user);
+  
   useEffect(() => {
     dispatch(getUserInfo());
   }, [dispatch]);

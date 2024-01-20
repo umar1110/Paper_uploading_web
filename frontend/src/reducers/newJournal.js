@@ -6,7 +6,6 @@ export const submitJournal = createAsyncThunk(
   async (formData) => {
     try {
       const config = { headers: { "Content-Type": "multipart/form-data" } };
-      console.log(formData)
       const response = await axios.post(
         "/api/v1/journal/submit",
         formData,

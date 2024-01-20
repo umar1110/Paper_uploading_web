@@ -8,12 +8,12 @@ export const deleteUser = createAsyncThunk(
   async (id) => {
     // sliceName / actionName
     try {
-      console.log(id);
+      
       const response = await axios.get(`/api/v1/admin/delete/${id}`);
 
       return response.data;
     } catch (error) {
-      console.log(error);
+      
       const customError = new Error(error.response.data.error);
       throw customError;
     }
@@ -26,14 +26,13 @@ export const changeRole = createAsyncThunk(
     // sliceName / actionName
     try {
       // console.log(id);
-      console.log(id,role)
+      
       const config = { headers: { "Content-Type": "application/json" } };
 
       const response = await axios.put(`/api/v1/admin/role/${id}`,{role},config);
 
       return response.data;
     } catch (error) {
-      console.log(error);
       const customError = new Error(error.response.data.error);
       throw customError;
     }

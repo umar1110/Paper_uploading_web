@@ -109,7 +109,7 @@ function AllUsers() {
     <>
       {loading ? (
         <Loader />
-      ) : users.length == 0 ? (
+      ) : users.length === 0 ? (
         <>
           {isAlertDisplay && (
             <div className="alert absolute w-full ">

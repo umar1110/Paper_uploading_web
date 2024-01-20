@@ -59,7 +59,7 @@ const [selectedValue, setselectedValue] = useState("")
       ) : (
         <>
           {isAlertDisplay && (
-            <div className="alert absolute w-full ">
+            <div className="alert fixed top-0 w-full ">
               <Stack sx={{ width: "100%" }} spacing={2}>
                 <Alert severity={alertType}>{alertMessage}</Alert>
               </Stack>
@@ -67,46 +67,46 @@ const [selectedValue, setselectedValue] = useState("")
           )}
           <div className=" journalDetials relative min-h-screen px-3 md:px-6">
           <div className="downloadBtn w-full flex justify-evenly ">
-            <a href={journal && journal.pdf.url ? journal.pdf.url: "#"}>
+            <a href={journal && journal?.pdf.url ? journal?.pdf.url: "#"}>
             <button className="btn py-2 px-5 rounded-lg bg-green-500 text-white my-4">Download Paper</button>
             </a>
-            <a href={journal && journal.form.url ? journal.form.url: "#"}>
+            <a href={journal && journal?.form.url ? journal?.form.url: "#"}>
             <button className="btn py-2 px-5 rounded-lg bg-green-500 text-white my-4">Download Form</button>
             </a>
           </div>
             <div className="heading my-7">
               <h2 className="title text-center  font-bold text-2xl">
-                {journal.title}
+                {journal?.title}
               </h2>
 
               <p className="date text-center text-gray-500">
-                ( {journal.date.slice(0, 10)} )
+                ( {journal?.date.slice(0, 10)} )
               </p>
             </div>
 
             <div className="abstractDiv ">
               <p className="text-start font-bold mb-3 ">Abstract :</p>
-              <p className="abstract ">{journal.description}</p>
+              <p className="abstract ">{journal?.description}</p>
             </div>
 
             <div className="author text-end mr-4 mt-10  ">
-              <h3 className="authorName ">Author : ( {journal.author} )</h3>
-              <h5 className="email">Email : ( {journal.email} )</h5>
+              <h3 className="authorName ">Author : ( {journal?.author} )</h3>
+              <h5 className="email">Email : ( {journal?.email} )</h5>
             </div>
 
             <div className="statusText mt-10 ">
               <p
                 className={`text-2xl text-center font-bold ${
-                  journal.status === "Published"
+                  journal?.status === "Published"
                     ? "text-green-800"
-                    : journal.status === "Under Review"
+                    : journal?.status === "Under Review"
                     ? "text-yellow-400"
-                    : journal.status === "Submitted"
+                    : journal?.status === "Submitted"
                     ? "text-gray-600"
                     : "text-red-900 "
                 }  `}
               >
-                {journal.status}
+                {journal?.status}
               </p>
             </div>
 
@@ -159,8 +159,8 @@ const [selectedValue, setselectedValue] = useState("")
               id="status"
               className="bg-gray-200 px-7"
               onChange={(e) => {
-                // Check if journal._id is defined
-                if (journal && journal._id) {
+                // Check if journal?._id is defined
+                if (journal && journal?._id) {
                   if (e.target.value === "Resubmit") {
                     if (file) {
                       const formData = new FormData();
@@ -173,7 +173,7 @@ const [selectedValue, setselectedValue] = useState("")
 
                       axios
                         .put(
-                          `/api/v1/admin/status/${journal._id}`,
+                          `/api/v1/admin/status/${journal?._id}`,
                           formData,
                           config
                         )
@@ -203,7 +203,7 @@ const [selectedValue, setselectedValue] = useState("")
 
                       axios
                         .put(
-                          `/api/v1/admin/status/${journal._id}`,
+                          `/api/v1/admin/status/${journal?._id}`,
                           formData,
                           config
                         )
@@ -227,7 +227,7 @@ const [selectedValue, setselectedValue] = useState("")
                     };
                     axios
                       .put(
-                        `/api/v1/admin/status/${journal._id}`,
+                        `/api/v1/admin/status/${journal?._id}`,
                         { status: e.target.value },
                         config
                       )
@@ -247,7 +247,7 @@ const [selectedValue, setselectedValue] = useState("")
               }}
             >
               <option value="" disabled selected>
-                {journal.status}
+                {journal?.status}
               </option>
               {statusOPtions.map((status, i) => {
                 return (

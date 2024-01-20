@@ -4,7 +4,7 @@ import axios from "axios";
 export const getAllJournals = createAsyncThunk(
   "alljournals/getalljournals",
   async ({ page, title, author, year,id }) => {
-    console.log(id)
+    
     try {
       const response = await axios.post(
         `/api/v1/admin/journals?page=${page}&title=${
@@ -12,7 +12,7 @@ export const getAllJournals = createAsyncThunk(
         }&author=${author ? author : ""}&year=${year ? year : 0}&id=${id?id:""}`
       );
 
-      console.log(response.data)
+      
       return response.data;
 
     } catch (error) {

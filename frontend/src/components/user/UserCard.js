@@ -11,26 +11,26 @@ function UserCard({ user, sr, deleteUser, changeRole }) {
           {sr}
         </div>
         <div className="nameHeading w-[20%] p-2 border-r-2 border-gray-200">
-          {user.name}
+          {user?.name}
         </div>
         <div className="emailHeading w-[40%] p-2 border-r-2 border-gray-200">
-          {user.email}
+          {user?.email}
         </div>
         <div
           className={`roleHeading w-[10%] p-2 border-r-2 border-gray-200 ${
-            user.role === "admin" ? "text-green-700" : "text-red-500"
+            user?.role === "admin" ? "text-green-700" : "text-red-500"
           }`}
         >
-          {user.role}
+          {user?.role}
         </div>
 
         <div className="changeRole  w-[15%] p-2  border-r-2 border-gray-200">
           <select
-            onChange={(e) => changeRole(user._id, e.target.value)}
+            onChange={(e) => changeRole(user?._id, e.target.value)}
             name="roleChange"
             className="w-full outline-none p-2 rounded-sm"
             id="changeRole"
-            value={user.role}
+            value={user?.role}
           >
             <option value="admin">Admin</option>
             <option value="user">User</option>
@@ -42,7 +42,7 @@ function UserCard({ user, sr, deleteUser, changeRole }) {
         >
           <svg
             onClick={() => {
-              deleteUser(user._id);
+              deleteUser(user?._id);
             }}
             xmlns="http://www.w3.org/2000/svg"
             width="24"
